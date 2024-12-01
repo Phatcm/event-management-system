@@ -25,7 +25,7 @@ def register_middleware(app: FastAPI):
         allowed_hosts=[
             "localhost",
             "127.0.0.1",
-            "bookly-api-dc03.onrender.com",
+            "eventify-api-v4bi.onrender.com",
             "0.0.0.0",
         ],
     )
