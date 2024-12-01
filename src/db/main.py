@@ -12,7 +12,7 @@ async_engine = AsyncEngine(create_engine(url=Config.DATABASE_URL, echo=True))
 # This function handle the initialize start of db
 async def init_db():
     async with async_engine.begin() as conn:
-        from src.events.models import Event
+        from src.db.models import Event
 
         # Create all the SQLModel models
         await conn.run_sync(SQLModel.metadata.create_all)

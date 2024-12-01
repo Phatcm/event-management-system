@@ -1,5 +1,6 @@
 import uuid
 from typing import Optional, Dict, List
+from src.rsvp.schemas import RSVP
 from pydantic import BaseModel
 from datetime import datetime
 
@@ -14,6 +15,7 @@ class Event(BaseModel):
     capacity: int
     created_at: datetime
     updated_at: datetime
+    rsvps: List[RSVP]
 
 
 class EventCreateModel(BaseModel):

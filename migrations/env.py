@@ -6,8 +6,9 @@ from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
 # Custom import
-from src.auth.models import User
-from src.events.models import Event
+from src.db.models import User
+from src.db.models import Event
+from src.db.models import RSVP
 from sqlmodel import SQLModel
 from src.config import Config
 
