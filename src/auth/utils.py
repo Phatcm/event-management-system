@@ -19,7 +19,7 @@ def verify_password(password: str, hash: str) -> bool:
     return password_context.verify(password, hash)
 
 
-def create_random_secret(length: int = 8) -> str:
+def create_random_secret(length: int = 16) -> str:
     import secrets
 
     return secrets.token_hex(length)

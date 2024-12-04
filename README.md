@@ -33,7 +33,7 @@ Ensure you have the following installed:
     pip install -r requirements.txt
     ```
 
-5. Set up environment variables by copying the example configuration:
+5. Set up environment variables .env by copying the .env.example configuration:
 
 6. Run database migrations to initialize the database schema:
     ```bash

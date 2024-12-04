@@ -78,7 +78,7 @@ class EventService:
     async def search_events(self, query: str, session: AsyncSession) -> List[Event]:
         # Use SQL LIKE to search for events by name or description
         statement = select(Event).where(
-            Event.name.ilike(f"%{query}%") | Event.description.ilike(f"%{query}%")
+            Event.title.ilike(f"%{query}%") | Event.description.ilike(f"%{query}%")
         )
         result = await session.exec(statement)
         return result.all()
